@@ -75,7 +75,7 @@ margin-bottom: 69px;
     line-height: 70px;
     margin: 0px;
 }
-.banner_Container .detail{
+.banner_Container .detail, .info{
     font-size: 16px;
     font-weight: 600;
 }
@@ -191,4 +191,71 @@ position: relative;
     color: rgba(224, 44, 109, 0.87);
     margin-top: 30px;
 }
- 
+/* bonus aria style */
+.bonus_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 70px;
+}
+.video_aria{
+width: 45%;
+padding: 10px;
+box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+border-radius: 5px;
+}
+.video_aria video{
+width: 100%;
+border-radius: 5px;
+
+}
+.info{
+    width: 45%;
+    padding: 10px;
+    margin-top: 15px;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    margin: 14px 0px;
+}
+#title{
+    font-size: 35px;
+    margin-top: 0px;
+}
+/* footer aria style */
+.footer_container{
+    width: 100%;
+    background: #0A0826;
+}
+.footer-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 239px;   
+}
+.footer-content h3{
+    color: white;
+    font-size: 24px;
+    margin: 0;
+}
+.footer-content p{
+    color: white;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0;
+}
+.social_icon {
+margin-top: 17px;
+}
+.social_icon a{
+text-decoration: none;
+color: white;
+padding: 5px 15px;
+}
+.fab{
+font-size: 15px;
+transition: all .2s;
+}
+.social_icon a:hover .fab{
+transform: scale(1.3);
+}
