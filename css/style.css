@@ -14,7 +14,7 @@ header{
     justify-content: center;
     width: 100%;
     height: 80px;
-    background: #f33e80;    
+    background: #E02C6D;    
   }
 nav{
     width: 90%;
@@ -23,7 +23,7 @@ nav{
     align-items: center;
     padding:0px 20px;
 }
-nav h2{
+.influencer h2{
     font-size: 24px;
     letter-spacing: 2px;
     font-weight: bold;
@@ -47,6 +47,22 @@ nav h2{
 .menu_item span a:hover{
     border-bottom: 2px solid rgb(255, 255, 255);
     }
+/* dropdown style */
+#checkBox{
+    display: none;
+    position: relative;
+}
+.navToggler{
+    display: none;
+}
+.fa-bars{
+    position: absolute;
+    top: 25px;
+    left: 5px;
+    font-size: 30px;
+    color: white;    
+}
+
 .icon .fas{    
     color: whitesmoke;
     font-size: 20px;
@@ -55,8 +71,11 @@ nav h2{
     transition: all .1s;
     cursor: pointer;
     }
+.responsive_icon{
+    display: none;
+}
     /* Banner aria style here */
-.container{
+.container, .bonus_container{
     width: 90%;
     padding:0px 20px;
        
@@ -182,7 +201,7 @@ position: relative;
 .seeMore_btn  {
     display: flex;
     justify-content: right;
-    margin-right: 80px;
+    margin-right: -1000px;
 }
 .seeMore_btn a  {
     text-decoration: none;
@@ -258,4 +277,86 @@ transition: all .2s;
 }
 .social_icon a:hover .fab{
 transform: scale(1.3);
+}
+
+
+
+/* -------------------------------------------------
+                    responsive
+                    -------------------------------- */
+@media (max-width:830px) {
+       header{
+        width:100%;
+    }
+    .influencer h2{
+        font-size: 26px;
+        text-align: center;
+        line-height: 33px;
+    }    
+    .menu_item{
+        position: fixed;
+        width: 100%;
+        flex-direction: column;
+        top: 80px;
+        left: 0px;
+        margin: 0;
+        padding: 0;
+        background: #f73d81fd;
+        transform: translateY(-200px) ;             
+    }
+    .menu_item .icon{
+      display: none; 
+    }
+    .responsive_icon{
+     display: block;
+     color: whitesmoke;
+    font-size: 20px;
+    margin:0px;
+    cursor: pointer;
+    }
+   .navToggler{
+        display: block;
+    }
+    #checkBox:checked~.menu_item{
+        transform: translateY(0px);
+    }
+    .banner_Container{
+        flex-direction: column;
+    }
+    .banner_info{
+        order: 2;
+    }   
+    .blogs{
+       grid-template-columns: repeat(2,1fr);
+    }
+   .seeMore_btn{
+       margin-right: 15px;
+   }
+    .bonus_container{
+       flex-direction: column;
+    }
+    .video_aria{
+        width: 100%;
+    }
+    .info{
+        width: 100%;
+    }
+    
+}
+
+@media (max-width:668px) {
+    header{
+        width: 100%;
+    }
+    .logo_item{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .blogs{
+        grid-template-columns: repeat(1,1fr);
+        }
+    .blog{
+        width: 100%;
+    }
+
 }
